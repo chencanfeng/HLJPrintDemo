@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfr-Vz-Ubo">
+                                <rect key="frame" x="54" y="122" width="268" height="30"/>
+                                <state key="normal" title="打印（1001）"/>
+                                <connections>
+                                    <action selector="printAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6B-JT-n3s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUP-8E-v6d">
+                                <rect key="frame" x="54" y="160" width="268" height="30"/>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qT7-H9-VDd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vU-nm-rU0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-2b-inN">
+                                        <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Apu-2b-inN" firstAttribute="top" secondItem="9vU-nm-rU0" secondAttribute="top" constant="269" id="AxV-ds-PCE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Apu-2b-inN" secondAttribute="bottom" constant="270" id="SJx-q2-cXa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Apu-2b-inN" secondAttribute="trailing" constant="68" id="i8R-nr-aRs"/>
+                                    <constraint firstItem="Apu-2b-inN" firstAttribute="leading" secondItem="9vU-nm-rU0" secondAttribute="leading" constant="67" id="zvA-pL-dqB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9vU-nm-rU0" secondAttribute="trailing" id="1cz-r7-8bP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JUP-8E-v6d" secondAttribute="trailing" constant="37" id="1ma-Sm-4tT"/>
+                            <constraint firstItem="JUP-8E-v6d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="4uZ-Yb-6nr"/>
+                            <constraint firstItem="JUP-8E-v6d" firstAttribute="top" secondItem="Mfr-Vz-Ubo" secondAttribute="bottom" constant="8" id="7PK-5b-Gpj"/>
+                            <constraint firstItem="9vU-nm-rU0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7oB-Zm-eeE"/>
+                            <constraint firstItem="Mfr-Vz-Ubo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="PQM-1A-8Fp"/>
+                            <constraint firstItem="9vU-nm-rU0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QHf-yh-r3e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mfr-Vz-Ubo" secondAttribute="trailing" constant="37" id="aKf-6l-NkX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9vU-nm-rU0" secondAttribute="bottom" id="aLs-rl-QYc"/>
+                            <constraint firstItem="Mfr-Vz-Ubo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="arX-b3-Jjr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="parentView" destination="9vU-nm-rU0" id="Ji7-Wz-rrt"/>
+                        <outlet property="showview" destination="Apu-2b-inN" id="CUn-Nu-baX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262" y="-47"/>
+        </scene>
+    </scenes>
+</document>
